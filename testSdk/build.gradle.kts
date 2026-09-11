@@ -50,8 +50,8 @@ publishing {
     publications {
         register<MavenPublication>("release") {
             groupId = "com.yangzi"
-            artifactId = "testSdk"
-            version = "1.0.2"
+            artifactId = "test-sdk"
+            version = "1.0.3"
 
             afterEvaluate {
                 from(components["release"])
