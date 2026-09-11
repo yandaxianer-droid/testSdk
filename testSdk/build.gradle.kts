@@ -64,7 +64,7 @@ publishing {
             name = "GitHubPackages"
 
             url = uri(
-                "https://github.com/yandaxianer-droid/testSdk"
+                "https://maven.pkg.github.com/yandaxianer-droid/testSdk"
             )
 
             credentials {
