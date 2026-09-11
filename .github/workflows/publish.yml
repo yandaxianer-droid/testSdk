@@ -15,18 +15,26 @@ jobs:
 
     steps:
 
+      # 1. 拉取代码
       - name: Checkout
         uses: actions/checkout@v4
 
+      # 2. 安装 JDK 17
       - name: Setup JDK
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
 
+      # 3. 配置 Gradle
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
+      # 4. 给 Gradle Wrapper 添加 Linux 执行权限
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      # 5. 发布 SDK
       - name: Publish SDK
         run: ./gradlew :testSdk:publish
         env:
