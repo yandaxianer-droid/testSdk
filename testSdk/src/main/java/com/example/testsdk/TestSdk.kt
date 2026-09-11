@@ -9,4 +9,8 @@ object TestSdk {
         Toast.makeText(context,"HHH", Toast.LENGTH_SHORT).show()
     }
 
+    fun toastWWW(context: Context){
+        Toast.makeText(context,"WWW", Toast.LENGTH_SHORT).show()
+    }
+
 }
